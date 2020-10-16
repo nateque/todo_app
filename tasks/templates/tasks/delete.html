@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<div class="center-column">
+	<form method="POST" action="">
+        {% csrf_token %}
+        <h4>Are you sure you want to delete "{{ item }}" ?</h4>
+		<input class="btn btn-info" type="submit" name="Confirm">
+        <a class="btn btn-danger" href="{% url 'home' %}">Cancel</a>
+	</form>
+
+</div>
+
+{% endblock content %}
